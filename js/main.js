@@ -3,11 +3,12 @@ var song = "";
 var pp = 0.00;
 var diff = "";
 var star = "";
+var html = "";
 
 $(document).ready(function() {
   $.ajax({
     type: "GET",
-    url: "https://raw.githubusercontent.com/DuoVR/BigPP/master/js/songs.csv",
+    url: "https://raw.githubusercontent.com/DuoVR/PPFarming/master/js/songs.tsv",
     dataType: "text",
     success: function(data) {
       readData(data);
@@ -16,13 +17,26 @@ $(document).ready(function() {
 });
 
 function readData(allText) {
+	var tbody = $('tbody');
   var rows = allText.split(/\r\n|\n/);
-  for (let i = 0; i < 100; i++) {
+	html = "";
+  for (let i = 0; i < 20; i++) {
     rows[i] = rows[i].split('\t');
-    song = rows[i][0];
+    song = $.trim(rows[i][0]);
 		pp = rows[i][1];
 		diff = rows[i][2];
 		star = rows[i][3];
+		html += '<tr class="row100 body">';
+		html += '<td class="cell100 column1">' + song + '</td>';
+		html += '<td class="cell100 column2">' + pp + '</td>';
+		html += '<td class="cell100 column3">' + diff + '</td>';
+		html += '<td class="cell100 column4">' + star + '</td>';
+		html += '</tr>';
+		tbody.html(html);
+		console.log(song);
+		console.log(pp);
+		console.log(diff);
+		console.log(star);
   }
 }
 
