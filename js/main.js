@@ -1,3 +1,30 @@
+var songList = [];
+var song = "";
+var pp = 0.00;
+var diff = "";
+var star = "";
+
+$(document).ready(function() {
+  $.ajax({
+    type: "GET",
+    url: "https://raw.githubusercontent.com/DuoVR/BigPP/master/js/songs.csv",
+    dataType: "text",
+    success: function(data) {
+      readData(data);
+    }
+  });
+});
+
+function readData(allText) {
+  var rows = allText.split(/\r\n|\n/);
+  for (let i = 0; i < 100; i++) {
+    rows[i] = rows[i].split('\t');
+    song = rows[i][0];
+		pp = rows[i][1];
+		diff = rows[i][2];
+		star = rows[i][3];
+  }
+}
 
 (function ($) {
 	"use strict";
