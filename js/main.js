@@ -6,6 +6,8 @@ var star = "";
 var html = "";
 
 $(document).ready(function() {
+	var tbody = $('tbody');
+	tbody.html("");
   $.ajax({
     type: "GET",
     url: "https://raw.githubusercontent.com/DuoVR/PPFarming/master/js/songs.tsv",
@@ -19,8 +21,8 @@ $(document).ready(function() {
 function readData(allText) {
 	var tbody = $('tbody');
   var rows = allText.split(/\r\n|\n/);
-	html = "";
-  for (let i = 0; i < 20; i++) {
+  for (let i = 0; i < 3000; i++) {
+		html = "";
     rows[i] = rows[i].split('\t');
     song = $.trim(rows[i][0]);
 		pp = rows[i][1];
@@ -32,11 +34,8 @@ function readData(allText) {
 		html += '<td class="cell100 column3">' + diff + '</td>';
 		html += '<td class="cell100 column4">' + star + '</td>';
 		html += '</tr>';
-		tbody.html(html);
-		console.log(song);
-		console.log(pp);
-		console.log(diff);
-		console.log(star);
+		tbody.append(html);
+		console.log("ADDING: " + song);
   }
 }
 
