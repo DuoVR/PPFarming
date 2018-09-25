@@ -24,8 +24,8 @@
 
 body, html {
 	height: 100%;
-	font-family: sans-serif;
-  background-color: #2C2F33;
+	font-family: Lato-Regular;
+  background-color: #272727;
 }
 
 /* ------------------------------------ */
@@ -85,6 +85,20 @@ button:hover {
 
 iframe {
 	border: none !important;
+}
+
+.title {
+  text-align: center;
+  padding: 30px;
+}
+
+.title h2 {
+  font-family: Lato-Bold;
+  color: #0070FF;
+}
+
+.title h5 {
+  color: #FF3B3B;
 }
 
 /*//////////////////////////////////////////////////////////////////
@@ -154,7 +168,7 @@ iframe {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  padding: 33px 30px;
+  padding: 15px 30px 33px 30px;
 }
 
 .wrap-table100 {
@@ -222,7 +236,6 @@ th, td {
 }
 
 .table100-body {
-  max-height: 585px;
   overflow: auto;
 }
 
@@ -246,9 +259,6 @@ th, td {
   line-height: 1.4;
   background-color: #222222;
 }
-
-
-/*---------------------------------------------*/
 
 .table100.ver3 {
   border-radius: 10px;
@@ -278,6 +288,5 @@ th, td {
   font-size: 15px;
   color: #FF3B3B;
   line-height: 1.4;
-  text-transform: uppercase;
   background-color: #393939;
 }

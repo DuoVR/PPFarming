@@ -4,6 +4,10 @@ var pp = 0.00;
 var diff = "";
 var star = "";
 var html = "";
+var link = "";
+var imgLink = "";
+var img = "";
+var id = "";
 
 $(document).ready(function() {
 	var tbody = $('tbody');
@@ -25,17 +29,19 @@ function readData(allText) {
 		html = "";
     rows[i] = rows[i].split('\t');
     song = $.trim(rows[i][0]);
-		pp = rows[i][1];
+		pp = parseFloat(rows[i][1]).toFixed(2);
 		diff = rows[i][2];
 		star = rows[i][3];
+		starFloat = parseFloat(star.substring(0, star.length - 1)).toFixed(2);
+		star = starFloat.toString() + "★";
+		link = "https://beatsaver.com/browse/detail/" + rows[i][4];
 		html += '<tr class="row100 body">';
-		html += '<td class="cell100 column1">' + song + '</td>';
+		html += '<td class="cell100 column1"><a href="' + link + '">' + song + '</a></td>';
 		html += '<td class="cell100 column2">' + pp + '</td>';
 		html += '<td class="cell100 column3">' + diff + '</td>';
 		html += '<td class="cell100 column4">' + star + '</td>';
 		html += '</tr>';
 		tbody.append(html);
-		console.log("ADDING: " + song);
   }
 }
 
