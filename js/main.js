@@ -36,7 +36,7 @@ function readData(allText) {
 		star = starFloat.toString() + "★";
 		link = "https://beatsaver.com/browse/detail/" + rows[i][4];
 		html += '<tr class="row100 body">';
-		html += '<td class="cell100 column1"><a href="' + link + '">' + song + '</a></td>';
+		html += '<td class="cell100 column1"><a href="' + link + '" target="_blank">' + song + '</a></td>';
 		html += '<td class="cell100 column2">' + pp + '</td>';
 		html += '<td class="cell100 column3">' + diff + '</td>';
 		html += '<td class="cell100 column4">' + star + '</td>';
