@@ -153,6 +153,7 @@ iframe {
 
 .limiter {
   width: 80%;
+  min-width: 750px;
   margin: 0 auto;
 }
 
@@ -174,6 +175,7 @@ iframe {
 
 .wrap-table100 {
   width: 100%;
+  min-width: 750px;
 }
 
 /*//////////////////////////////////////////////////////////////////
@@ -184,6 +186,7 @@ iframe {
 
 table {
   width: 100%;
+  min-width: 750px;
 }
 
 th, td {
