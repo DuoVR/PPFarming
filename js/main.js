@@ -34,9 +34,15 @@ function readData(allText) {
 		star = rows[i][3];
 		starFloat = parseFloat(star.substring(0, star.length - 1)).toFixed(2);
 		star = starFloat.toString() + "★";
-		link = "https://beatsaver.com/browse/detail/" + rows[i][4];
+		var img = rows[i][4];
+		imgLink = img.substring(6, img.length - 2);
+		var imgList = rows[i][4].split("/");
+		var end = imgList[imgList.length - 1];
+		var endList = end.split(".");
+		var songId = endList[0];
+		link = "https://beatsaver.com/browse/detail/" + songId;
 		html += '<tr class="row100 body">';
-		html += '<td class="cell100 column1"><a href="' + link + '" target="_blank">' + song + '</a></td>';
+		html += '<td class="cell100 column1"><img class="cover" src="' + imgLink + '"><a href="' + link + '" target="_blank">   ' + song + '</a></td>';
 		html += '<td class="cell100 column2">' + pp + '</td>';
 		html += '<td class="cell100 column3">' + diff + '</td>';
 		html += '<td class="cell100 column4">' + star + '</td>';
