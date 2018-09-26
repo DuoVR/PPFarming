@@ -42,7 +42,7 @@ function readData(allText) {
 		var songId = endList[0];
 		link = "https://beatsaver.com/browse/detail/" + songId;
 		html += '<tr class="row100 body">';
-		html += '<td class="cell100 column1"><img class="cover" src="' + imgLink + '"><a href="' + link + '" target="_blank">   ' + song + '</a></td>';
+		html += '<td class="cell100 column1"><img class="cover" src="' + imgLink + '"><a href="' + link + '" target="_blank">' + song + '</a></td>';
 		html += '<td class="cell100 column2">' + pp + '</td>';
 		html += '<td class="cell100 column3">' + diff + '</td>';
 		html += '<td class="cell100 column4">' + star + '</td>';
