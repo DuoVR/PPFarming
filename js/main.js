@@ -14,7 +14,7 @@ $(document).ready(function() {
 	tbody.html("");
   $.ajax({
     type: "GET",
-    url: "https://raw.githubusercontent.com/DuoVR/PPFarming/master/js/songs.tsv",
+    url: "https://raw.githubusercontent.com/DuoVR/PPFarming/master/js/songlist.tsv",
     dataType: "text",
     success: function(data) {
       readData(data);
