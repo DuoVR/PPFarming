@@ -25,7 +25,7 @@
 body, html {
 	height: 100%;
 	font-family: Lato-Regular;
-  background-color: #272727;
+  background-color: #111;
 }
 
 /* ------------------------------------ */
@@ -253,7 +253,7 @@ th, td {
   color: #0070FF;
   line-height: 1.4;
   text-transform: uppercase;
-  background-color: #393939;
+  background-color: #272727;
 }
 
 .table100.ver3 td {
@@ -261,7 +261,7 @@ th, td {
   font-size: 20px;
   color: #808080;
   line-height: 1.4;
-  background-color: #222222;
+  background-color: #151515;
 }
 
 .table100.ver3 {
@@ -292,7 +292,7 @@ th, td {
   font-size: 20px;
   color: #FF3B3B;
   line-height: 1.4;
-  background-color: #393939;
+  background-color: #272727;
 }
 
 .cover {
