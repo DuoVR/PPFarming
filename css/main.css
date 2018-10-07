@@ -106,7 +106,6 @@ iframe {
 [ Scroll bar ]*/
 .js-pscroll {
   position: relative;
-  overflow: hidden;
 }
 
 .table100 .ps__rail-y {
@@ -152,9 +151,11 @@ iframe {
 [ Table ]*/
 
 .limiter {
-  width: 80%;
-  min-width: 750px;
+  width: 100%;
+  min-width: 300px;
+  max-width: 1080px;
   margin: 0 auto;
+  border-radius: 10px;
 }
 
 .container-table100 {
@@ -175,7 +176,7 @@ iframe {
 
 .wrap-table100 {
   width: 100%;
-  min-width: 750px;
+  min-width: 300px;
 }
 
 /*//////////////////////////////////////////////////////////////////
@@ -186,7 +187,7 @@ iframe {
 
 table {
   width: 100%;
-  min-width: 750px;
+  min-width: 300px;
 }
 
 th, td {
@@ -196,7 +197,7 @@ th, td {
 
 .column1 {
   width: 55%;
-  padding-left: 40px;
+  padding-left: 20px;
 }
 
 .column2 {
@@ -244,21 +245,20 @@ th, td {
 }
 
 .table100.ver3 {
-  background-color: #393939;
+  background-color: #151515;
+  font-size: 16px;
 }
 
 .table100.ver3 th {
   font-family: Lato-Bold;
-  font-size: 20px;
   color: #0070FF;
   line-height: 1.4;
   text-transform: uppercase;
-  background-color: #272727;
+  background-color: #222222;
 }
 
 .table100.ver3 td {
   font-family: Lato-Regular;
-  font-size: 20px;
   color: #808080;
   line-height: 1.4;
   background-color: #151515;
@@ -266,7 +266,6 @@ th, td {
 
 .table100.ver3 {
   border-radius: 10px;
-  overflow: hidden;
   box-shadow: 0 0px 40px 0px rgba(0, 0, 0, 0.15);
   -moz-box-shadow: 0 0px 40px 0px rgba(0, 0, 0, 0.15);
   -webkit-box-shadow: 0 0px 40px 0px rgba(0, 0, 0, 0.15);
@@ -289,10 +288,9 @@ th, td {
 .table100.ver3 tr:hover td {
   cursor: pointer;
   font-family: Lato-Bold;
-  font-size: 20px;
   color: #FF3B3B;
   line-height: 1.4;
-  background-color: #272727;
+  background-color: #222222;
 }
 
 .cover {
@@ -300,4 +298,81 @@ th, td {
   width: 46px;
   border-radius: 10px;
   margin-right: 10px;
+}
+
+@media only screen and (max-width: 800px) {
+	.table100.ver3 {
+		font-size: 12px;
+	}
+
+  .title {
+    font-size: 16px;
+  }
+
+  h2, h5 {
+    font-size: 16px;
+  }
+
+  .cover {
+    height: 35px;
+    width: 35px;
+    border-radius: 10px;
+    margin-right: 10px;
+  }
+
+  .column1 {
+    padding-left: 10px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+	.table100.ver3 {
+		font-size: 10px;
+	}
+
+	.title {
+		font-size: 14px;
+    padding: 20px;
+	}
+
+  h2, h5 {
+    font-size: 14px;
+  }
+
+  .column1 {
+    padding-left: 10px;
+  }
+
+  .cover {
+    height: 25px;
+    width: 25px;
+    border-radius: 10px;
+    margin-right: 8px;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+	.table100.ver3 {
+		font-size: 8px;
+	}
+
+  .title {
+    font-size: 12px;
+    padding: 10px;
+  }
+
+  h2, h5 {
+    font-size: 12px;
+  }
+
+	.column1 {
+		padding-left: 2px;
+	}
+
+  .cover {
+    height: 20px;
+    width: 20px;
+    border-radius: 10px;
+    margin-right: 2px;
+  }
 }
