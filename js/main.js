@@ -43,7 +43,7 @@ function readData(allText) {
 		imgsrcPNG = "https://beatsaver.com/storage/songs/" + songIdBase + "/" + songId + ".PNG"
 		html += '<tr class="row100 body">';
 		html += '<td class="cell100 column1">';
-		html += '<img class="cover" src="' + imgsrc + '" onError="this.onerror=null;this.src=' + "'default.jpg';" + '">';
+		html += '<img class="cover" src="' + imgsrc + '" onError="this.onerror=null;this.src=' + "'https://github.com/DuoVR/PPFarming/blob/master/js/default.jpg?raw=true';" + '">';
 		html += '<a href="' + link + '" target="_blank">' + song + '</a></td>';
 		html += '<td class="cell100 column2">' + pp + '</td>';
 		html += '<td class="cell100 column3">' + diff + '</td>';
