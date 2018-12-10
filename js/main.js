@@ -28,6 +28,7 @@ function readData(allText) {
   for (let i = 0; i < 3000; i++) {
 		html = "";
     rows[i] = rows[i].split('\t');
+		console.log(rows[i])
     song = $.trim(rows[i][0]);
 		pp = parseFloat(rows[i][1]).toFixed(2);
 		diff = rows[i][2];
@@ -35,10 +36,12 @@ function readData(allText) {
 		starFloat = parseFloat(star.substring(0, star.length - 1)).toFixed(2);
 		star = starFloat.toString() + "★";
 		var songId = rows[i][5];
+		console.log(link)
 		link = "https://beatsaver.com/download/" + songId;
+		console.log(link)
 		html += '<tr class="row100 body">';
 		html += '<td class="cell100 column1">';
-		html += '<a href="' + link + '">' + song + '</a></td>';
+		html += '<a href="' + link + '" target="_blank">' + song + '</a></td>';
 		html += '<td class="cell100 column2">' + pp + '</td>';
 		html += '<td class="cell100 column3">' + diff + '</td>';
 		html += '<td class="cell100 column4">' + star + '</td>';
