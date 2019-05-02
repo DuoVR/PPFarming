@@ -196,24 +196,24 @@ th, td {
 }
 
 .column1 {
-  width: 55%;
+  width: 54%;
   padding-left: 20px;
 }
 
 .column2 {
-  width: 15%;
+  width: 10%;
 }
 
 .column3 {
-  width: 15%;
+  width: 12%;
 }
 
 .column4 {
-  width: 15%;
+  width: 12%;
 }
 
 .column5 {
-  width: 13%;
+  width: 12%;
 }
 
 .table100-head th {
@@ -224,6 +224,27 @@ th, td {
 .table100-body td {
   padding-top: 5px;
   padding-bottom: 5px;
+}
+
+/*==================================================================
+[ Style specific columns ]*/
+
+.column1 {
+  display: flex;
+  width: 100%;
+}
+
+.column1 img {
+  flex: 0 0 auto;
+}
+
+.column1 a {
+  align-self: center;
+}
+
+.column2 {
+  text-align: center;
+  padding-left: 10px;
 }
 
 /*==================================================================
