@@ -226,6 +226,22 @@ th, td {
   padding-bottom: 5px;
 }
 
+/*==================================================================
+[ Style specific columns ]*/
+
+.column1 {
+  display: flex;
+  width: 100%;
+}
+
+.column1 img {
+  flex: 0 0 auto;
+}
+
+.column1 a {
+  align-self: center;
+}
+
 .column2 {
   text-align: center;
   padding-left: 10px;
